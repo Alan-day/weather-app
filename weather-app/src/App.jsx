@@ -1,11 +1,28 @@
 
 import './App.css';
 import WeatherWidget from './Components/WeatherWidget';
-
+import { useEffect, useState } from 'react';
 function App() {
+
+
+const [location, setLocation] = useState();
+
+
+
+useEffect(()=>{
+  navigator.geolocation.getCurrentPosition((position) => {
+
+    setLocation({"latitude":position.coords.latitude, "longitude":position.coords.longitude})
+
+})}, []);
+
+
   return (
     <div className="App">
-<WeatherWidget/>  
+      {location ? <WeatherWidget longitude={location.longitude} latitude={location.latitude}/>  
+ : null
+    
+    }
     </div>
   );
 }
