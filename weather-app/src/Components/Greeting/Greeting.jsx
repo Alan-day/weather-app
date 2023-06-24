@@ -19,9 +19,9 @@ const Greeting = () => {
 
   useEffect(() => {
     getGreeting();
-  }, []);
+  }, [greeting]);
 
-  return <div>{greeting}</div>;
+  return <div className="greeting-container">{greeting}</div>;
 };
 
 export default Greeting;

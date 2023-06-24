@@ -7,6 +7,9 @@ function WeatherWidget(props) {
   const [weather, setWeather] = useState({});
   const [time, setTime] = useState(new Date().getHours());
   const [temperatureinCelsius, setTemperatureinCelsius] = useState(0);
+  const [icon, setIcon] = useState(""); 
+
+
 
   const [location, setLocation] = useState(0);
 
@@ -20,8 +23,19 @@ function WeatherWidget(props) {
     const result = await fetch(url);
     const data = await result.json();
     setWeather({ data });
-    console.log(process.env);
+    console.log(data);
   };
+
+   const getIcon =()=> {
+
+    if (weather.data && weather.data.weather) {
+      setIcon
+    }
+
+
+   }
+
+
 
   useEffect(() => {
     getWeather(longitude, latitude);
