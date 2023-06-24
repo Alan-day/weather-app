@@ -5,10 +5,12 @@ function WeatherWidget(props) {
   const { longitude, latitude } = props;
 
   const [weather, setWeather] = useState({});
-
+  const [time, setTime] = useState(new Date().getHours());
   const [temperatureinCelsius, setTemperatureinCelsius] = useState(0);
 
   const [location, setLocation] = useState(0);
+
+  console.log(time);
 
   const getWeather = async (lon, lat) => {
     console.log(lon, lat);
