@@ -1,5 +1,5 @@
 import "./App.css";
-import WeatherWidget from "./Components/WeatherWidget";
+import WeatherWidget from "./Components/WeatherWidget/WeatherWidget";
 import { useEffect, useState } from "react";
 import Greeting from "./Components/Greeting/Greeting";
 function App() {
