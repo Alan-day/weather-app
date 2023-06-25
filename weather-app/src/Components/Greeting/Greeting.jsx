@@ -8,11 +8,11 @@ const Greeting = () => {
   const getGreeting = () => {
     if (time > 5 && time < 12) {
       setGreeting("Good morning!");
-    } else if ((time > 12) & (time < 17)) {
+    } else if ((time >= 12) & (time < 17)) {
       setGreeting("Good afternoon!");
-    } else if (time > 17 && time < 22) {
+    } else if (time >= 17 && time < 22) {
       setGreeting("Good evening");
-    } else if (time > 22 && time < 5) {
+    } else if (time >= 22 && time < 5) {
       setGreeting("Good night");
     }
   };

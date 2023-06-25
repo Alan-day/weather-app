@@ -1,5 +1,8 @@
-.widget{
-
-    display: flex;
-    flex-direction: column;
+.widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__icon {
+    width: 200px;
+  }
 }
