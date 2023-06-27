@@ -1,0 +1,58 @@
+@use "../../Styles/variables" as *;
+
+.form-header {
+  font-family: $text-font;
+  font-size: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  background-color: lightblue;
+  height: 15vh;
+
+  &__heading {
+    font-size: 18px;
+  }
+
+  &__info {
+    font-family: $category-font;
+    font-size: 22px;
+  }
+  &__task {
+    padding-right: 15px;
+    font-family: $text-font;
+  }
+
+  &__button-add {
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+
+  &__button-remove {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px;
+    color: red;
+    border: 2px solid red;
+    border-radius: 5px;
+    background: none;
+  }
+
+  &__button-add {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px;
+    color: green;
+    border: 2px solid green;
+    border-radius: 5px;
+    background: none;
+  }
+
+  &__input {
+    margin-top: 15px;
+    border: none;
+  }
+}

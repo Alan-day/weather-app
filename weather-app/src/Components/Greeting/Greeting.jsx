@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import "./Greeting.scss";
 
 const Greeting = () => {
   const [time, setTime] = useState(new Date().getHours());
@@ -11,9 +12,9 @@ const Greeting = () => {
     } else if ((time >= 12) & (time < 17)) {
       setGreeting("Good afternoon!");
     } else if (time >= 17 && time < 22) {
-      setGreeting("Good evening");
+      setGreeting("Good evening!");
     } else if (time >= 22 && time < 5) {
-      setGreeting("Good night");
+      setGreeting("Good night!");
     }
   };
 
@@ -21,7 +22,11 @@ const Greeting = () => {
     getGreeting();
   }, [greeting]);
 
-  return <div className="greeting-container">{greeting}</div>;
+  return (
+    <div className="greeting-container">
+      <h1 className="greeting-container__heading">{greeting}</h1>
+    </div>
+  );
 };
 
 export default Greeting;

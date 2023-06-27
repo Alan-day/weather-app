@@ -12,8 +12,6 @@ function WeatherWidget(props) {
 
   const [location, setLocation] = useState(0);
 
-  console.log(time);
-
   const getWeather = async (lon, lat) => {
     //environment variable
 
@@ -105,11 +103,11 @@ function WeatherWidget(props) {
   }, [weather]);
 
   return (
-    <div className="widget">
-      <p> Celsius: {temperatureinCelsius}°C</p>
-      <p> Location: {location}</p>
-      <img src={icon} className="widget__icon" />
-      <p>{iconDescription}</p>
+    <div className="widget-container">
+      <p className="widget-container__temperature"> {temperatureinCelsius}°C</p>
+      <p className="widget-container__location"> {location}</p>
+      <img src={icon} className="widget-container__icon" />
+      <p className="widget-container__description">{iconDescription}</p>
     </div>
   );
 }

@@ -1,0 +1,10 @@
+@use "../../Styles/variables" as *;
+
+.greeting-container {
+  font-family: $title-font;
+  background-color: #55dd6e;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
